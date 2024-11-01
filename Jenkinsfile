@@ -1,18 +1,13 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Stage-1 , clean ws') {
-            steps {
-                cleanWs()
-            }
-        }        
-        stage('Stage-2 , npm install') {
+    stages {             
+        stage('Stage-1 , npm install') {
             steps {
                 sh 'npm install'
             }
         } 
-        stage('Stage-3 , Deploy') {
+        stage('Stage-2 , Deploy') {
             steps {
                sh 'echo "deploying application..."'
             }               
